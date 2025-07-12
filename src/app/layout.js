@@ -1,15 +1,12 @@
-// File: src/app/layout.js
-import './globals.css';
+import './globals.css';         // this must point exactly at src/app/globals.css
 import Navbar from './components/Navbar';
-
-export const metadata = { /* … */ };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-red-500 text-white">
         <Navbar />
-        {children}
+        {children}               {/* ← this is critical */}
       </body>
     </html>
   );
